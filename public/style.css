@@ -64,30 +64,30 @@ form div {
 
 .typer {
   /* display: flex; */
-  padding-top: 120px;
+  padding-top: 10%;/*120px;*/
   align-items: center;
   vertical-align: middle;
 }
 
 .about {
-  padding-top: 245px;
-  padding-bottom: 130px;
+  padding-top: 28.8%;/*245px;*/
+  padding-bottom: 15.3%;/*130px;*/
   vertical-align: middle;
   font-size: 25px;
 }
 .about-image {
   /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./linked-in-profile.jpg'); */
-  padding: 150px 40px 0px 100px;
+  padding: 20% 10% 5% 20%;/*150px 40px 0px 100px;*/
   width: 450px;
   height: 650px;
 }
 .projects {
-  padding: 50px;
+  padding: 5.8%;/*50px;*/
 }
 
 .project-title {
-  padding-top: 75px;
-  padding-bottom: 25px;
+  padding-top: 1% /*75px;*/;
+  padding-bottom: 3.3% /*25px;*/;
   text-align: center;
 }
 
