@@ -1,80 +1,85 @@
-import React, { Component } from 'react'
-import Card from 'react-bootstrap/Card'
+import React, { useState } from 'react'
+// import Card from 'react-bootstrap/Card'
+import styled from 'styled-components'
+import {Frame} from 'framer'
 
-class ProjectCard extends Component {
-  constructor(props) {
-    super(props)
+export default function ProjectCard(props) {
 
-    this.state = {
-      isHover: false,
+  let [isHover, setHover] = useState(false);
+  const project = props.project
+
+
+  let Card = styled(Frame)`
+    display: flex;
+    margin: 10px;
+    flex-wrap: wrap;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+  `
+
+  let Header = styled.h3`
+    margin: 30px 10px;
+    display: flex;
+    justify-content: center;
+    color: white;
+  `
+
+  let Body = styled.p`
+    display: flex;
+    align-items: center;
+    margin: 0% 5%;
+  `
+
+  function onHover() {
+    if (isHover === true) {
+      setHover(false);
     }
-    this.onHover = this.onHover.bind(this)
+    if (isHover === false) {
+      setHover(true);
+    }
   }
 
-  onHover() {
-    if (this.state.isHover === true) {
-      this.setState({ isHover: false })
-    }
-    if (this.state.isHover === false) {
-      this.setState({ isHover: true })
-    }
-  }
-  render() {
-    const project = this.props.project
-    return (
-      <div
-        onMouseEnter={this.onHover}
-        onMouseLeave={this.onHover}
-        className="pb-4"
-      >
-        <a className="project-link" href={project.href} target="_blank">
-          {!this.state.isHover ? <Card
-            bg="secondary"
-            text="light"
-            style={{ width: '350px', height: '300px' }}
-          >
-            <Card.Header as="h5">{project.name}</Card.Header>
 
-            <Card.Body>
-              <Card.Text>{project.description}</Card.Text>
-            </Card.Body>
-          </Card>
-            :
-            <Card
-            bg="light"
-            text="secondary"
-            style={{ width: '350px', height: '300px' }}
-          >
-            <Card.Header as="h5">{project.name}</Card.Header>
+  return(
+    <Card height={300} width={300} position={'relative'}>
+      <Header>{project.name}</Header>
+      <Body>{project.description}</Body>
+    </Card>
+  )
 
-            <Card.Body>
-              <Card.Text>{project.description}</Card.Text>
-            </Card.Body>
-            </Card>}
+    // return (
+    //   <div
+    //     onMouseEnter={onHover}
+    //     onMouseLeave={onHover}
+    //     className="pb-4"
+    //   >
+    //     <a className="project-link" href={project.href} target="_blank">
+    //       {!isHover ? <Card
+    //         bg="secondary"
+    //         text="light"
+    //         style={{ width: '350px', height: '300px' }}
+    //       >
+    //         <Card.Header as="h5">{project.name}</Card.Header>
 
-        </a>
-      </div>
-    )
-  }
+    //         <Card.Body>
+    //           <Card.Text>{project.description}</Card.Text>
+    //         </Card.Body>
+    //       </Card>
+    //         :
+    //         <Card
+    //         bg="light"
+    //         text="secondary"
+    //         style={{ width: '350px', height: '300px' }}
+    //       >
+    //         <Card.Header as="h5">{project.name}</Card.Header>
+
+    //         <Card.Body>
+    //           <Card.Text>{project.description}</Card.Text>
+    //         </Card.Body>
+    //         </Card>}
+
+    //     </a>
+    //   </div>
+    // )
 }
-
-/* <img
-  width={100}
-  height={100}
-  className="mr-3"
-  src={project.imageURl}
-  alt="Generic placeholder"
-/> */
-
-/* <Card/
-  bg="light"
-  text="secondary"
-  style={{ width: '350px', height: '300px' }}
->
-  <Card.Img className="project-img" src={img} />
-  <Card.ImgOverlay>
-    <Card.Text>Go to github</Card.Text>
-  </Card.ImgOverlay>
-</Card>} */
-
-export default ProjectCard

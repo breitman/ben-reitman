@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import ProjectCard from '../cards/ProjectCard'
+import styled from 'styled-components'
+
 
 let projects = [
   {
@@ -44,7 +46,14 @@ let projects = [
 
 let count = 1;
 
+let ProjCard  = styled(ProjectCard)`
+`
 
+let Container = styled.div`
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+`
 
 class ProjectsPage extends Component {
 
@@ -52,17 +61,15 @@ class ProjectsPage extends Component {
     return (
       <div className="projects" id="projects">
         <h1 className="project-title">Projects</h1>
-        <div>
-          <ul className="cards">
+        <Container>
             {projects && projects.map(project => (
-              <ProjectCard
+              <ProjCard
                 className="card"
                 project={project}
                 key={count++}
               />
             ))}
-          </ul>
-        </div>
+        </Container>
       </div>
     )
   }

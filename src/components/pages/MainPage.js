@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import AboutMePage from './AboutMePage'
-import { HomePage, ProjectsPage } from '..'
+import {ProjectsPage, HomePage } from '..'
 
 export default class MainPage extends Component {
   render() {
