@@ -5,10 +5,23 @@ import Nav from 'react-bootstrap/Nav'
 import {NavHashLink as NavLink} from 'react-router-hash-link'
 
 class NavBar extends Component {
+
+  constructor(){
+    super();
+    this.scrollWithOffset = this.scrollWithOffset.bind(this);
+  }
+  scrollWithOffset(el, offset) {
+    const elementPosition = el.offsetTop - offset;
+    window.scroll({
+      top: elementPosition,
+      left: 0,
+      behavior: "smooth"
+    }) }   
+
   render() {
     return (
-      <Navbar bg="light" expand="lg" sticky="top">
-        <Navbar.Brand href="/#home">Ben Reitman</Navbar.Brand>
+      <Navbar expand="lg" sticky="top">
+        <Navbar.Brand style={{color: "white"}}href="/#home">Ben Reitman</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
@@ -22,17 +35,17 @@ class NavBar extends Component {
             </NavLink>
             <NavLink
               to="/#aboutme"
-              scroll={el =>
-                el.scrollIntoView({behavior: 'smooth', block: 'end'})
-              }
+              scroll={el =>{
+                this.scrollWithOffset(el, 200)
+              }}
             >
               About Me
             </NavLink>
             <NavLink //TODO: change this so that scrolls into correct view
               to="/#projects"
-              scroll={el =>
-                el.scrollIntoView({behavior: 'smooth', block: 'start'})
-              }
+              scroll={el =>{
+                this.scrollWithOffset(el, -50)
+              }}
             >
               Projects
             </NavLink>

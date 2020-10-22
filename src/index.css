@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #212121;
+  color: white;
 }
 
 code {
@@ -58,6 +60,8 @@ nav a:hover {
 nav a:active::after {
   text-decoration: underline;
 }
+
+
 
 form div {
   margin: 1em;

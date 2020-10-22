@@ -1,5 +1,7 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  color: white !important;
+  background-color: #212121 !important;
 }
 
 a {
@@ -21,8 +23,13 @@ label {
   /* background-color: gold; */
 }
 
+
+.navbar{
+  background-color: #212121 !important;
+}
+
 nav a {
-  color: grey;
+  color: white;
   display: inline-block;
   margin: 1em;
   text-decoration: none;
@@ -36,11 +43,6 @@ nav a:hover {
   font-weight: bold;
 }
 
-/* nav a:active{
-  text-decoration:  underline;
-  color: black;
-} */
-
 nav a:active::after {
   text-decoration: underline;
 }
@@ -49,6 +51,20 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30vh);
+  visibility: hidden;
+  transition: opacity 3s ease-in, transform 2s ease-out;
+  will-change: opacity, visibility;
+}
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
 
 .home {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -63,32 +79,64 @@ form div {
 }
 
 .typer {
-  /* display: flex; */
-  padding-top: 10%;/*120px;*/
+  padding-top: 10%;
   align-items: center;
   vertical-align: middle;
 }
 
-.about {
-  padding-top: 28.8%;/*245px;*/
-  padding-bottom: 15.3%;/*130px;*/
-  vertical-align: middle;
-  font-size: 25px;
+.about-container{
+  height: 30px !important; 
 }
-.about-image {
-  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./linked-in-profile.jpg'); */
-  padding: 20% 10% 5% 20%;/*150px 40px 0px 100px;*/
-  width: 450px;
-  height: 650px;
+
+#aboutme{
+  margin-top: 300px;
+  margin-bottom: 100px;
 }
+
+/* If the screen size is 1001px wide or more, set the font-size of <div> to 80px */
+@media screen and (min-width: 1001px) {
+  .about {
+    padding-top: 30%;
+    vertical-align: middle;
+    font-size: 25px;
+  width: 100%;
+  }
+  .about-image {
+    margin: 0% 20% 0% 20%;
+    max-width: 400px;
+    max-height: 670px;
+    height: auto;
+    width: auto;
+  }
+}
+
+/* If the screen size is 1000px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 1000px) {
+  .about {
+    padding-top: 40%;
+    padding-bottom: 15.3%;
+    vertical-align: middle;
+    font-size: 18px;
+    width: 100%;
+  }
+  .about-image {
+    margin: 20%;
+    max-width: 270px;
+    max-height: 400px;
+    height: auto;
+    width: auto;
+  }
+}
+
+
 .projects {
-  padding: 5.8%;/*50px;*/
+  padding: 5.8%;
 }
 
 .project-title {
-  padding-top: 1% /*75px;*/;
-  padding-bottom: 3.3% /*25px;*/;
+  margin: 10%;
   text-align: center;
+  font-family: "Nunito", sans-serif;
 }
 
 .project-description {
@@ -105,4 +153,9 @@ form div {
   padding-left: 50px;
   width: 300px !important;
   height:299px;
+}
+
+.icon{
+  padding-left: 8px;
+  padding-right: 8px;
 }
