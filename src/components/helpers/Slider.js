@@ -6,15 +6,16 @@ const Container = styled.div`
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
-    margin-top: 35%;
+    padding-top: 350px;
+    align-self: flex-end;
 `
 
 const move = keyframes`
     from {
-        left: -110%;
+        left: -200%;
     }
     to {
-        left: 110%;
+        left: 200%;
     }
 `
 const Slide = styled.div`
@@ -22,23 +23,7 @@ const Slide = styled.div`
     position: relative;
     overflow-x: hidden;
     animation: ${move} 10s linear infinite;
-`
-
-
-const move2 = keyframes`
-    from {
-        left: -1000%;
-    }
-    to {
-        left: 100%;
-    }
-`
-const Slide2 = styled.div`
-    position: relative;
-    overflow-x: hidden;
-    padding: 0px 20px 0px 20px;
-    animation: ${move2} 10s linear infinite;
-`
+` 
 
 export default function Slider(props) {
     let count = 0;

@@ -15,7 +15,8 @@ import Typescript_Logo from '../../logos/typescript.svg'
 import Unity_Logo from '../../logos/unity-69.svg'
 import Java_Logo from '../../logos/java-4.svg'
 import Git_Logo from '../../logos/git.svg'
-
+import FireBase_Logo from '../../logos/firebase-1.svg'
+import PostGres_Logo from '../../logos/postgresql.svg'
 import Slider from '../helpers/Slider.js'
 
 let Icon = styled(FontAwesomeIcon)`
@@ -47,6 +48,8 @@ class HomePage extends Component {
       <Logo src={Python_Logo} alt="Python Logo" />,
       <Logo src={Typescript_Logo} alt="TS Logo" />,
       <Logo src={Unity_Logo} alt="Unity Logo" />,
+      <Logo src={FireBase_Logo} alt="Firebase logo"/>,
+      <Logo src={PostGres_Logo} alt="Postgresql Logo" />,
       <Logo src={Java_Logo} alt="Java Logo" />,
       <Logo src={Git_Logo} alt="Git Logo" />,
       <Logo src={GraphQl_Logo} alt="GraphQL Logo" />,
