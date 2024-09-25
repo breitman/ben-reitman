@@ -1,8 +1,8 @@
 body {
   overflow-x: hidden;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   color: white !important;
-  background-color: #212121 !important;
+  background-color: #adb6c4 !important;
 }
 
 a {
@@ -24,13 +24,12 @@ label {
   /* background-color: gold; */
 }
 
-
-.navbar{
-  background-color: #212121 !important;
+.navbar {
+  background-color: #adb6c4 !important;
 }
 
 nav a {
-  color: white;
+  color: #001b2e;
   display: inline-block;
   margin: 1em;
   text-decoration: none;
@@ -66,76 +65,11 @@ form div {
   visibility: visible;
 }
 
-
-.home {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('./home-background.jpg');
-  height: 90vh;
-
-  /* Parallax Effect */
-  background-attachment: fixed;
-  background-position: 50% 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.typer {
-  padding-top: 10%;
-  align-items: center;
-  vertical-align: middle;
-}
-
-.about-container{
-  height: 30px !important; 
-}
-
-#aboutme{
-  margin-top: 300px;
-  margin-bottom: 100px;
-}
-
-/* If the screen size is 1001px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 1001px) {
-  .about {
-    padding-top: 30%;
-    vertical-align: middle;
-    font-size: 25px;
-  width: 100%;
-  }
-  .about-image {
-    margin: 0% 20% 0% 20%;
-    max-width: 400px;
-    max-height: 670px;
-    height: auto;
-    width: auto;
-  }
-}
-
-/* If the screen size is 1000px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 1000px) {
-  .about {
-    padding-top: 40%;
-    padding-bottom: 15.3%;
-    vertical-align: middle;
-    font-size: 18px;
-    width: 100%;
-  }
-  .about-image {
-    margin: 20%;
-    max-width: 270px;
-    max-height: 400px;
-    height: auto;
-    width: auto;
-  }
-}
-
-
 .projects {
   padding: 5.8%;
 }
 
 .project-title {
-  margin: 10%;
   text-align: center;
   font-family: "Nunito", sans-serif;
 }
@@ -153,10 +87,10 @@ form div {
 .project-img {
   padding-left: 50px;
   width: 300px !important;
-  height:299px;
+  height: 299px;
 }
 
-.icon{
+.icon {
   padding-left: 8px;
   padding-right: 8px;
 }
